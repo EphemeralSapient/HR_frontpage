@@ -1,0 +1,79 @@
+<script>
+  import { fade } from 'svelte/transition';
+  import Icon from "../public/recruit_logo.png";
+</script>
+
+<style lang="postcss">
+  .navbar {
+      @apply bg-opacity-50 backdrop-filter backdrop-blur-lg py-4;
+      @apply flex justify-between items-center;
+      @apply border-b-2 border-opacity-60;
+      @apply shadow-md;
+      @apply p-4 fixed top-0 w-full;
+      @apply z-50;
+  }
+
+  .navbar-logo {
+      @apply flex items-center; /* Align the logo and text horizontally */
+      @apply pl-4; /* Left padding added */
+      @apply transition-all duration-300 ease-in-out; /* Transition for the hover effect */
+  }
+
+  .navbar-logo img {
+      @apply w-12 h-12 mr-2 rounded-full;
+      @apply hover:scale-110; /* Hover scaling effect */
+      @apply hover:rotate-6; /* Hover rotation effect */
+      @apply hover:shadow-lg; /* Hover shadow effect */
+  }
+
+  .navbar-logo span {
+      @apply text-lg font-semibold text-black;
+  }
+
+  .navbar-buttons {
+      @apply flex gap-8;
+  }
+
+  .navbar-buttons a {
+      @apply text-black no-underline text-lg font-semibold transition-transform duration-300 transform-gpu;
+      @apply px-4 py-2 rounded-md hover:bg-opacity-70 focus:outline-none;
+      @apply relative overflow-hidden;
+      @apply transition-all duration-300 ease-in-out; /* New transition properties */
+      @apply hover:from-blue-400 hover:via-blue-500 hover:to-blue-600;
+      @apply hover:text-black;
+      @apply hover:shadow-lg;
+
+      &:before {
+          content: "";
+          /* @apply absolute inset-0 bg-gradient-to-r from-blue-100 via-blue-500 to-blue-400 opacity-0 transition-opacity duration-300; */
+          @apply mix-blend-multiply;
+      }
+
+      &:hover:before {
+          @apply opacity-100;
+      }
+
+      &:hover:after {
+          @apply opacity-100;
+      }
+
+      /* New hover effect for better visual appeal */
+      &:hover {
+          transform: scale(1.05);
+      }
+  }
+</style>
+
+<div class="navbar" transition:fade>
+  <div class="navbar-logo">
+      <img src={Icon} alt="Recruit Logo" />
+      <span>RecruitRover</span>
+  </div>
+
+  <div class="navbar-buttons">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/#">         </a>
+  </div>
+</div>
