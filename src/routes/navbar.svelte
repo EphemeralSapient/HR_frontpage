@@ -71,9 +71,9 @@
   </div>
 
   <div class="navbar-buttons">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
-      <a href="/#">         </a>
-  </div>
+    <a href="/#_" id="_">Home</a>
+    <a href="/#_" id="_">About</a>
+    <a href="/#_" id="_">Contact</a>
+    <a href="/#_" id="_">         </a>
+    </div>
 </div>
