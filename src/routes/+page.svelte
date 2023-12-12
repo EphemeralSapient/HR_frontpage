@@ -4,6 +4,7 @@ import Start from "./start.svelte";
 </script>
 
 <Navbar/>
+<Navbar/>
 
 <Start/>
 

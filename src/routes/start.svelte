@@ -84,11 +84,11 @@ $: if (showContainer) {
     }
 
     .features-list {
-        @apply flex space-x-4;
+        @apply flex space-x-4 p-10 overflow-x-auto overflow-y-visible;
     }
 
     .feature-item {
-        @apply w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-8 relative z-10; /* Increased padding to p-8 for improved spacing */
+        @apply min-w-[330px] relative z-10;
         transition: transform 0.3s ease-in-out;
     }
 
@@ -227,7 +227,7 @@ $: if (showContainer) {
 
 <div class="container">
     <div class="summary">
-        If you've enrolled and doesn't show on status, please retry as your verified number will be saved and won't ask again for OTP verification if registered.
+        <a href="https://github.com/EphemeralSapient/HR_frontpage"> If the chat didn't appear then we are out of trial period. To check the website code, please visit github repo </a>
     </div>
 </div>
 
